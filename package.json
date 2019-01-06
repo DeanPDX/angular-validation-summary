@@ -9,8 +9,10 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build-lib": "ng build angular-validation-summary && npm run copy-license && npm run copy-readme",
+    "patch-version": "cd angular-validation-summary && npm version patch && cd ..",
     "copy-license": "cp ./LICENSE ./dist/angular-validation-summary",
-    "copy-readme": "cp ./README.md ./dist/angular-validation-summary"
+    "copy-readme": "cp ./README.md ./dist/angular-validation-summary",
+    "publish-lib": "npm run patch-version && npm run build-lib && npm publish ./dist/angular-validation-summary"
   },
   "private": true,
   "dependencies": {
