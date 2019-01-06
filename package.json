@@ -7,7 +7,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build-lib": "ng build angular-validation-summary && npm run copy-license && npm run copy-readme",
+    "copy-license": "cp ./LICENSE ./dist/angular-validation-summary",
+    "copy-readme": "cp ./README.md ./dist/angular-validation-summary"
   },
   "private": true,
   "dependencies": {
