@@ -1,8 +1,23 @@
 {
   "name": "angular-validation-summary",
-  "version": "0.0.1",
-  "peerDependencies": {
-    "@angular/common": "^7.1.0",
-    "@angular/core": "^7.1.0"
+  "version": "1.0.2",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DeanPDX/angular-validation-summary.git"
+  },
+  "keywords": ["Angular", "Validation", "Validation Summary"],
+  "author": "Dean Davidson (http://deanpdx.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DeanPDX/angular-validation-summary/issues"
+  },
+  "homepage": "https://github.com/DeanPDX/angular-validation-summary",
+  "dependencies": {
+    "@angular/common": ">=5.0.0",
+    "@angular/core": ">=5.0.0",
+    "@angular/forms":">=5.0.0",
+    "@angular/platform-browser": ">=5.0.0",
+    "rxjs": ">=6.0.0"
   }
 }
