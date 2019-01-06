@@ -1,0 +1,6 @@
+<div *ngIf="showValidationSummary" class="validation-summary">
+    <p class="validation-message">{{ validationMessage }}</p>
+    <ul class="validation-error-list">
+        <li *ngFor="let error of errors" class="validation-error">{{ error }}</li>
+    </ul>
+</div>

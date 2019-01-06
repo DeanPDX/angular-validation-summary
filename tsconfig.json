@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "angular-validation-summary": [
+        "dist/angular-validation-summary"
+      ],
+      "angular-validation-summary/*": [
+        "dist/angular-validation-summary/*"
+      ]
+    }
   }
 }
