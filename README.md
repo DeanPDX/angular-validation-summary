@@ -89,6 +89,13 @@ The main app (`angular-validation-summary-srcs`) is for building and testing the
 
 Before serving the main app, run `ng build angular-validation-summary --watch` to build and watch the library for changes. Then you can run `ng serve` as you normally would to build and serve the test app.
 
+To publish a new version of the library to [NPM](https://www.npmjs.com/), run `npm run publish-lib`. This will do the following:
+
+* Run `npm version patch` to create a new patch.
+* Build the library.
+* Copy readme/license from the main project to the library.
+* Publish the patch on NPM.
+
 ## Design Goals
 
 * It should be performant.
