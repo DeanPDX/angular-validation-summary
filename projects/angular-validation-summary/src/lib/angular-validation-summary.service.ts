@@ -53,9 +53,11 @@ export class AngularValidationSummaryService {
   private getErrorsFromFormControl(control: FormControl, controlName: string): string[] {
     let returnMessages: string[] = [];
     let controlErrors = control.errors;
-    if (controlErrors === null || controlErrors.count === 0) {
+    if (controlErrors === null) {
       return;
     }
+    console.log(controlErrors);
+    // Handle built-in errors
     if (controlErrors.required) {
       returnMessages.push(`${controlName} is required`);
     }
@@ -69,9 +71,14 @@ export class AngularValidationSummaryService {
       let charactersOverMax = controlErrors.maxlength.actualLength - maxLength;
       returnMessages.push(`${controlName} maximum length is ${maxLength}. Please delete ${charactersOverMax} characters.`);
     }
-    if (controlErrors.message) {
-      returnMessages.push(`${controlName} ${controlErrors.message}`);
-    }
+    // Any strings are assumed to be error messages
+    Object.keys(controlErrors).forEach(key => {
+      let errorMessage = controlErrors[key];
+      if (typeof errorMessage === 'string') {
+        returnMessages.push(`${controlName} ${errorMessage}`);
+      }
+    });
+
     return returnMessages;
   }
 }
