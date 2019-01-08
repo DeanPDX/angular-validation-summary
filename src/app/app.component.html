@@ -25,7 +25,7 @@
 
     <label for="Password">Password</label>
     <input [(ngModel)]="password" type="password" id="Password" name="Password" placeholder="superSecure123" required
-      minlength="8" maxlength="20">
+      minlength="8" maxlength="20" badValidator>
 
     <label for="Comment">Comment (max 20 characters)</label>
     <textarea [(ngModel)]="comment" rows="2" id="Comment" name="Comment" maxlength="20" required></textarea>
