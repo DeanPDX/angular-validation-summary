@@ -4,7 +4,7 @@ A fast, customizable validation summary module for Angular 6/7. I wrote a [blog 
 
 ![Example Summary](https://www.deanpdx.com/images/2018-angular-forms/validation-summary-example.gif "Example Summary")
 
-Want to try it yourself with various options? Run the [interactive test form on StackBlitz](https://xorinoay.github.stackblitz.io/).
+Want to try it yourself with various options? Run the [interactive test form on StackBlitz](https://stackblitz.com/github/DeanPDX/angular-validation-summary?view=preview).
 
 ## Getting Started
 
