@@ -80,6 +80,10 @@ So, if you wanted to have a red [bootstrap alert](https://getbootstrap.com/docs/
 }
 ```
 
+Which results in this:
+
+![Bootstrap alert](https://raw.githubusercontent.com/DeanPDX/angular-validation-summary/master/docs/images/Theme%201.png)
+
 Or for the "warning" style:
 
 ```css
@@ -93,6 +97,8 @@ Or for the "warning" style:
     border-radius: .25rem;
 }
 ```
+
+![Bootstrap warning](https://raw.githubusercontent.com/DeanPDX/angular-validation-summary/master/docs/images/Theme%202.png)
 
 # Development
 
