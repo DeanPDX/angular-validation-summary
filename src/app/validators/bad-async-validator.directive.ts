@@ -20,7 +20,7 @@ export class BadAsyncValidatorDirective implements AsyncValidator {
         // setTimeout is intented to imitate server latency.
         return new Promise<ValidationErrors>(resolve => {
             setTimeout(() => {
-                if (c.value.includes('bad') === true) {
+                if (c.value && c.value.indexOf('bad') >= 0) {
                     resolve({ badMessage: 'can\'t contain "bad"' });
                 } else {
                     resolve(null);

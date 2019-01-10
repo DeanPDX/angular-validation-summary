@@ -58,7 +58,7 @@ export class AngularValidationSummaryService {
     }
     // Handle built-in errors
     if (controlErrors.required) {
-      returnMessages.push(`${controlName} is required`);
+      returnMessages.push(`${controlName} is required.`);
     }
     if (controlErrors.minlength) {
       let minLength = controlErrors.minlength.requiredLength;
@@ -69,6 +69,9 @@ export class AngularValidationSummaryService {
       let maxLength = controlErrors.maxlength.requiredLength;
       let charactersOverMax = controlErrors.maxlength.actualLength - maxLength;
       returnMessages.push(`${controlName} maximum length is ${maxLength}. Please delete ${charactersOverMax} characters.`);
+    }
+    if (controlErrors.email) {
+      returnMessages.push(`${controlName} must be a valid email address.`);
     }
     // Any strings are assumed to be error messages
     Object.keys(controlErrors).forEach(key => {

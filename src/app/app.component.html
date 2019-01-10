@@ -23,12 +23,15 @@
       <option value="usa">USA</option>
     </select>
 
+    <label for="email">Email</label>
+    <input [(ngModel)]="email" type="text" id="Email" name="Email" placeholder="janedoe@angelfire.com" email required>
+
     <label for="Password">Password</label>
     <input [(ngModel)]="password" type="password" id="Password" name="Password" placeholder="superSecure123" required
-      minlength="8" maxlength="20" badValidator>
+      minlength="8" maxlength="20">
 
     <label for="Comment">Comment (max 20 characters)</label>
-    <textarea [(ngModel)]="comment" rows="2" id="Comment" name="Comment" maxlength="20" required></textarea>
+    <textarea [(ngModel)]="comment" rows="2" id="Comment" name="Comment" maxlength="30" required rudeValidator badValidator></textarea>
 
     <angular-validation-summary [form]="newUserForm" [validationMessage]="validationMessage" [hideUntilSubmit]="hideUntilSubmit"></angular-validation-summary>
 

@@ -15,7 +15,8 @@ export class AppComponent {
   public lastName: string = '';
   public password: string = '';
   public country: string = '';
-  public comment: string = 'This string is just too long';
+  public comment: string = 'This bad, rude comment is just too long';
+  public email: string = '';
   
   formSubmit() {
     alert('Submitted the form!');
