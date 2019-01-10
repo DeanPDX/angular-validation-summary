@@ -56,7 +56,6 @@ export class AngularValidationSummaryService {
     if (controlErrors === null) {
       return;
     }
-    console.log(controlErrors);
     // Handle built-in errors
     if (controlErrors.required) {
       returnMessages.push(`${controlName} is required`);
