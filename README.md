@@ -53,7 +53,13 @@ You will most likely want to build your own validators at some point. For an exa
 
 **validationMessage**: The validation message to display. Defaults to `Please fix the following errors:`.
 
-**hideUntilSubmit**: If true, validation summary won't show until the form is submitted. Defaults to `false`.
+**hideUntilSubmit**: If true, validation summary won't show until the form is submitted. Defaults to `false`. Ideally, the validation summary could also prevent submit function from firing. Due to the way [onSubmit](https://github.com/angular/angular/blob/7.2.0-rc.0/packages/forms/src/directives/ng_form.ts#L285) works, this is impossible without a custom submit directive. An easy way to emit the `ngSubmit` event while preventing your submit function from firing, is using this pattern for your `ngSubmit` directive:
+
+```html
+<form #myForm="ngForm" (ngSubmit)="myForm.valid && saveSomeRecord()">
+```
+
+This emits the event but doesn't call your submit function. You can see this in action on the [test form](https://github.com/DeanPDX/angular-validation-summary/blob/master/src/app/app.component.html).
 
 ## Styling Your Validation Summary
 
