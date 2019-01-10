@@ -34,7 +34,18 @@ Then we will add an `angular-validation-summary` to our view using our named for
 <angular-validation-summary [form]="newUserForm"></angular-validation-summary>
 ```
 
-If you have any invalid controls, you should see validation messages. If you are using template-driven forms and have an input object that does *not* have an `[(ngModel)]` binding, it will not be validated since it won't be added to your form's `FormGroup`.
+**Imporant Note:** If you are using template-driven forms and have an input object that does *not* have an `[(ngModel)]` binding, it will not be validated since it won't be added to your form's `FormGroup`.
+
+## Adding Validations to a Form
+
+We support the following standard HTML5 and Angular validators: 
+
+* [required](https://angular.io/api/forms/Validators#required)
+* [minlength](https://angular.io/api/forms/Validators#minLength)
+* [maxlength](https://angular.io/api/forms/Validators#maxLength)
+* [email](https://angular.io/api/forms/EmailValidator)
+
+You will most likely want to build your own validators at some point. For an example of how to do this, take a look at [this demo validation](https://github.com/DeanPDX/angular-validation-summary/blob/master/src/app/validators/rude-validator.directive.ts) and [this async validation](https://github.com/DeanPDX/angular-validation-summary/blob/master/src/app/validators/bad-async-validator.directive.ts). The important part here is: make sure your `ValidationErrors` object includes a string with an error message.
 
 ## Validation Summary Options
 
