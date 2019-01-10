@@ -5,11 +5,14 @@ import { NG_ASYNC_VALIDATORS, AsyncValidator, AbstractControl, ValidationErrors 
     selector: '[badValidator]',
     providers: [{
         provide: NG_ASYNC_VALIDATORS,
-        useExisting: forwardRef(() => BadValidatorDirective), multi: true
+        useExisting: forwardRef(() => BadAsyncValidatorDirective), multi: true
     }]
 })
 
-export class BadValidatorDirective implements AsyncValidator {
+/**
+ * This is a test async validator to ensure that the user doesn't enter the text "bad". We simulate server latency of 500ms.
+ */
+export class BadAsyncValidatorDirective implements AsyncValidator {
 
     constructor() { }
 

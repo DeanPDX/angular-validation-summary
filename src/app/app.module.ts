@@ -4,12 +4,12 @@ import { FormsModule } from '@angular/forms';
 
 import { AngularValidationSummaryModule } from 'angular-validation-summary';
 import { AppComponent } from './app.component';
-import { BadValidatorDirective } from './bad-validator.directive';
+import { BadAsyncValidatorDirective } from './validators/bad-async-validator.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BadValidatorDirective
+    BadAsyncValidatorDirective
   ],
   imports: [
     BrowserModule,
