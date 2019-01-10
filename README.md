@@ -38,6 +38,8 @@ Then we will add an `angular-validation-summary` to our view using our named for
 
 **Imporant Note:** If you are using template-driven forms and have an input object that does *not* have an `[(ngModel)]` binding, it will not be validated since it won't be added to your form's `FormGroup`.
 
+If you run in to any problems or have an idea for improvement, please feel free to [submit an issue](https://github.com/DeanPDX/angular-validation-summary/issues). Or better yet, a pull request with a fix.
+
 ## Adding Validations to a Form
 
 We support the following standard HTML5 and Angular validators: 
